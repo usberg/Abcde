@@ -19,7 +19,7 @@ namespace Soft.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Facade.Quantity.Item", b =>
+            modelBuilder.Entity("Data.Quantity.MeasureData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -41,7 +41,7 @@ namespace Soft.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Measure");
+                    b.ToTable("Measures");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

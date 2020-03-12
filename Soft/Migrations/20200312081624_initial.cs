@@ -47,19 +47,19 @@ namespace Soft.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Measure",
+                name: "Measures",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Code = table.Column<string>(nullable: true),
-                    Definition = table.Column<string>(nullable: true),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true)
+                    Definition = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Measure", x => x.Id);
+                    table.PrimaryKey("PK_Measures", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -226,7 +226,7 @@ namespace Soft.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Measure");
+                name: "Measures");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
